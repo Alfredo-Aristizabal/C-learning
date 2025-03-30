@@ -20,12 +20,22 @@ en la maquina. Lenguajes de programacion modernos no presentan este comportamien
 */
 int main()
 {
-    int a = 3;
-    int *p = &a;
-    printf("The adress of a is %p ", &a);
-    printf("\nThe adress of a  from p is %p ", p);
-    printf("\nThe value of a from p %i", *p); // 3
-    p++;
-    printf("\nThe value of the variable pointed is %i", *p);
-    printf("\nThe value of p %p", p);
+    int n[3] = {1, 2, 3};
+    int *p1 = n;
+
+    char c[3] = {'A', 'B', 'C'};
+    char *p2 = c;
+
+    for (int i = 0; i < 3; i++)
+    {
+        printf("Memory adress of c[%i] = %p\n", i, (p2 + i));
+        printf("Value of c[%i] = %c\n\n", i, *(p2 + i));
+    }
+
+    printf("Segundo ejemplo: \n");
+    for (int i = 0; i < 3; i++)
+    {
+        printf("Memory adress of n[%i] = %p\n", i, (p1 + i));
+        printf("Value of n[%i] = %d\n\n", i, *(p1 + i));
+    }
 }
