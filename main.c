@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define SIZE 256
+
+// ./a.exe 1> result.txt
 int main()
 {
     FILE *fptr;
